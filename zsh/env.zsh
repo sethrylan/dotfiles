@@ -14,9 +14,9 @@ export GOPATH="$(go env GOPATH)" # Go
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-source <(kubectl completion bash)
+# export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+# [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+# source <(kubectl completion bash)
 
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
