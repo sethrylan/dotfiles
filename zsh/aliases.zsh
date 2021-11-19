@@ -1,18 +1,27 @@
 
-alias gistit='gist -Pcp -f output | xargs open'
 
+alias gistit='gist -Pcp -f output | xargs open'
+alias top='gotop'
+alias how='howdoi'
+alias cleandsstore="find . -type f -name '*.DS_Store' -ls -delete" # Recursively delete `.DS_Store` files
+alias rec='asciinema rec'
 
 alias g='git'
+alias gnvm="git reset --soft HEAD~1"  # undo commit https://twitter.com/bencodezen/status/1371564043278946305
+alias gfsk='git fetch && git reset --hard && git clean -dfx' # Reset repo to clean remote state
+alias greset='git reset --soft HEAD^' # Undo last commit, but don't throw away your changes
+
 alias k='kubectl'
-alias ls='ls -G'
 alias sb='open -a /Applications/Sublime\ Text.app/'
 
-## Use a long listing format ##
 
-alias ll='ls -la'
+alias do='docker'
+alias dstop='docker stop $(docker ps -a -q)' # Stop running containers
+alias dremove='docker rm -f $(docker ps -q)' # Stop & remove running containers
 
-## Show hidden files ##
-alias l.='ls -d .* --color=auto'
+
+alias ll='ls -la'   ## Use a long listing format ##
+alias ls='ls -G'
 
 
 ## a quick way to get out of current directory ##
