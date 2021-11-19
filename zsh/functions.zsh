@@ -22,7 +22,6 @@ gcd() {
    git clone "$(pbpaste)" && cd "${1##*/}"
 }
 
-
 # ram <process-name> - Find how much RAM a process is taking.
 ram() {
   local sum

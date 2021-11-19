@@ -14,11 +14,8 @@ alias greset='git reset --soft HEAD^' # Undo last commit, but don't throw away y
 alias k='kubectl'
 alias sb='open -a /Applications/Sublime\ Text.app/'
 
-
-alias do='docker'
 alias dstop='docker stop $(docker ps -a -q)' # Stop running containers
 alias dremove='docker rm -f $(docker ps -q)' # Stop & remove running containers
-
 
 alias ll='ls -la'   ## Use a long listing format ##
 alias ls='ls -G'
