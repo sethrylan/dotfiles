@@ -1,25 +1,6 @@
 ## How to use
 
 
-```shell
-# first, install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-cd ~
-git clone ... .dotfiles
-
-cat > ~/.zshenv <<EOF
-source ~/.dotfiles/zsh/env.zsh
-EOF
-
-
-cat > ~/.zshrc <<EOF
-source ~/.dotfiles/zsh/zshrc.zsh
-EOF
-```
-
-
-
 
 ## .gitconfig
 
@@ -41,22 +22,60 @@ EOF
 
 
 
+## Other tools
 
-## Homebrew
+* better touch tool
+* istat menus
+* flux
+* iTerm
 
-```sh
+
+# Setup
+
+
+## Install
+
+
+```shell
+cd ~
+
+git clone https://github.com/sethrylan/dotfiles ~/.dotfiles
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 brew install \
+      go \
       tldr gist howdoi gotop tokei \
-      gnuplot asciinema \
+      gnuplot asciinema screenfetch \
       watchexec reflex watch \
       octant aspell \
       jq dos2unix rbenv jenv wget wrk skaffold dive docker-ls telnet
 ```
 
 
+## Set up dotfiles links
 
-## Other tools
 
-* better touch tool
-* istat menus
-* flux
+```shell
+ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application Support/Code/User/settings.json
+
+cat > ~/.zshenv <<EOF
+source ~/.dotfiles/zsh/env.zsh
+EOF
+
+
+cat > ~/.zshrc <<EOF
+source ~/.dotfiles/zsh/zshrc.zsh
+EOF
+```
+
+
+
+## VS Code extensions
+
+From https://wiki.nikitavoloboev.xyz/text-editors/vs-code/vs-code-extensions
+
+
+
