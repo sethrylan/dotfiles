@@ -1,10 +1,29 @@
 ## How to use
 
 
+# Other tools
 
-## .gitconfig
+* iTerm2
+* Better Touch Tool
+* iStat Memu
 
-```
+# Setup
+
+## Git Prereqs
+
+```shell
+ssh-keygen -t ed25519 -C “seth.rylan@gmail.com”
+
+cat >  ~/.ssh/config <<EOF
+
+Host *.github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+EOF
+
+ssh-add -K ~/.ssh/id_ed25519
+
+cat > ~/.gitconfig <<EOF
 [core]
         trustctime = false
         ignorecase = false
@@ -18,20 +37,8 @@
         incoming = log --graph --decorate master..origin/master
 [pull]
         rebase = false
+EOF
 ```
-
-
-
-## Other tools
-
-* better touch tool
-* istat menus
-* flux
-* iTerm
-
-
-# Setup
-
 
 ## Install
 
@@ -39,10 +46,9 @@
 ```shell
 cd ~
 
+
 git clone https://github.com/sethrylan/dotfiles ~/.dotfiles
-
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 brew install \
