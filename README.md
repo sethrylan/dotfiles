@@ -1,11 +1,29 @@
 ## How to use
 
 
-# Other tools
 
-* iTerm2
-* Better Touch Tool
-* iStat Memu
+# Update Prefernces
+* Reverse scroll
+* Turn off smart quotes
+* Remap escape key
+* Key repeat
+
+
+# Update Finder Prefernces
+* Show extensions
+* Hide drives
+
+
+# Other tools
+## iTerm2
+
+Preferneces ➔ Profiles ➔ Keys ➔ left option as Esc+, and then Profiles ➔ Keys ➔ Mappings to add option+left as Esc+b, and option+right as Esc+f
+
+See https://stackoverflow.com/a/60079965
+
+## Better Touch Tool
+## iStat Menus
+## VS Code
 
 # Setup
 
