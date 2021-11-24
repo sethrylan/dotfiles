@@ -7,9 +7,7 @@ export PATH=$PATH:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/
 
 export GOOGLE_APPLICATION_CREDENTIALS=~/.cloud-builder-key.json
 
-export CACHE_KEY=$(cat ~/.isc/cache.key | base64)
-
-export GOPATH="$(go env GOPATH)" # Go
+# export GOPATH="$(go env GOPATH)" # Go
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

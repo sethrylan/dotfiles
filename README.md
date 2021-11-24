@@ -1,8 +1,8 @@
-## How to use
+## OSX Setup
 
+* Update OS
 
-
-# Update Prefernces
+# Update Preferences
 * Reverse scroll
 * Turn off smart quotes
 * Remap escape key
@@ -14,14 +14,35 @@
 * Hide drives
 
 
+```shell
+# Install xcode cli Tools
+xcode-select --install
+
+defaults write com.apple.Finder AppleShowAllFiles true
+killall Finder
+```
+
 # Other tools
+
+* Typora
+* Chrome Canary
+
+
 ## iTerm2
 
-Preferneces ➔ Profiles ➔ Keys ➔ left option as Esc+, and then Profiles ➔ Keys ➔ Mappings to add option+left as Esc+b, and option+right as Esc+f
+Preferences ➔ Profiles ➔ Keys ➔ left option as Esc+, and then Profiles ➔ Keys ➔ Mappings to add option+left as Esc+b, and option+right as Esc+f
 
 See https://stackoverflow.com/a/60079965
 
 ## Better Touch Tool
+
+4 Finger Swipe Left = Maximize window left
+4 Finger Swipe Up = Maximize Window
+4 FInger Swipe Right = Maximize Window Right
+4 Finge Sipe Down = Minimize Window below curosr
+4 Finger Tap = Mission control
+
+
 ## iStat Menus
 ## VS Code
 
