@@ -13,6 +13,9 @@
 * Show extensions
 * Hide drives
 
+# Spotlight
+* Remove external drives
+
 
 ```shell
 # Install xcode cli Tools
@@ -24,7 +27,6 @@ killall Finder
 
 # Other tools
 
-* Typora
 * Chrome Canary
 
 
@@ -41,6 +43,14 @@ See https://stackoverflow.com/a/60079965
 4 FInger Swipe Right = Maximize Window Right
 4 Finge Sipe Down = Minimize Window below curosr
 4 Finger Tap = Mission control
+
+## Typora
+
+* General -> On Launch -> Restore last closed
+* Appearance -> Themes -> Use separate theme
+* Image
+
+![Image](./typora-image.png)
 
 
 ## iStat Menus
