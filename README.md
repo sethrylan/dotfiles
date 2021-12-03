@@ -107,6 +107,7 @@ cat > ~/.gitconfig <<EOF
 EOF
 ```
 
+
 ## Install
 
 
@@ -127,6 +128,22 @@ brew install \
       jq dos2unix wget wrk skaffold dive docker-ls telnet \
       rbenv jenv
 ```
+
+### Set up dotfiles links
+
+```shell
+ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application Support/Code/User/settings.json
+
+cat > ~/.zshenv <<EOF
+source ~/.dotfiles/zsh/env.zsh
+EOF
+
+
+cat > ~/.zshrc <<EOF
+source ~/.dotfiles/zsh/zshrc.zsh
+EOF
+```
+
 
 ### Setup Ruby with rbenv
 
@@ -149,25 +166,6 @@ jenv versions
 jenv add /Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home
 ...
 jenv global 11.0
-```
-
-
-
-
-## Set up dotfiles links
-
-
-```shell
-ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application Support/Code/User/settings.json
-
-cat > ~/.zshenv <<EOF
-source ~/.dotfiles/zsh/env.zsh
-EOF
-
-
-cat > ~/.zshrc <<EOF
-source ~/.dotfiles/zsh/zshrc.zsh
-EOF
 ```
 
 
