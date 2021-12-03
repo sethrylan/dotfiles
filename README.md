@@ -110,7 +110,6 @@ EOF
 
 ## Install
 
-
 ```shell
 cd ~
 
@@ -132,7 +131,7 @@ brew install \
 ### Set up dotfiles links
 
 ```shell
-ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application Support/Code/User/settings.json
+ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 cat > ~/.zshenv <<EOF
 source ~/.dotfiles/zsh/env.zsh
@@ -169,10 +168,19 @@ jenv global 11.0
 ```
 
 
+### Sublime
+* Install package control
+
+```shell
+ln -s ~/.dotfiles/sublime/User ~/Library/Application\ Support/Sublime\ Text/Packages/
+```
 
 ## VS Code extensions
 
 From https://wiki.nikitavoloboev.xyz/text-editors/vs-code/vs-code-extensions
+
+
+
 
 
 

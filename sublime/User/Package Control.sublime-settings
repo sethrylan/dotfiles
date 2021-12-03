@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Git",
+		"Increment Selection",
+		"Indent XML",
+		"Package Control",
+		"Pretty JSON",
+		"Tomorrow Color Schemes",
+		"URLEncode",
+	],
+}

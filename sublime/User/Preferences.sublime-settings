@@ -1,0 +1,27 @@
+{
+	"added_words":
+	[
+		"httpd",
+		"namespace",
+		"localhost",
+		"Dockerfile",
+		"dockerfile",
+		"metadata",
+		"Namespaces",
+		"timelines",
+		"backend",
+		"failback",
+		"sanitization"
+	],
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_size": 16,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"ignored_words":
+	[
+		"discoverability"
+	],
+	"open_files_in_new_window": false,
+}
