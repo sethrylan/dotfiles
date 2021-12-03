@@ -16,7 +16,6 @@
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontLigatures": true,
     "editor.fontSize": 15,
-
     "files.exclude": {
         "**/node_modules/": true,
         "**/.git": true,
@@ -33,20 +32,16 @@
         "**/.project": true,
         "**/.settings": true
     },
-
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "files.eol": "\n",
-
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
-
     "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.currentLine.format": "${message}",
-
     "workbench.editor.enablePreviewFromQuickOpen": true,
     "workbench.colorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
@@ -61,7 +56,6 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-
     "go.toolsManagement.autoUpdate": true,
     "gopls": {
         "build.experimentalWorkspaceModule": true
@@ -75,11 +69,8 @@
     "redhat.telemetry.enabled": false,
     "svelte.enable-ts-plugin": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "window.zoomLevel": 3,
-
     "[typescript]": {
         "editor.autoClosingBrackets": "always",
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-
 }

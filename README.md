@@ -53,8 +53,14 @@ See https://stackoverflow.com/a/60079965
 ![Image](./typora-image.png)
 
 
+## Fonts
+[JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+
+
 ## iStat Menus
 ## VS Code
+
+* Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
 
 # Setup
 
