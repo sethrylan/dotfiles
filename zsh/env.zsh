@@ -1,9 +1,17 @@
 
-export PATH=$PATH:~/.jenv/bin:~/.jenv/shims:~/.jenv/bin
+export PATH=$PATH:~/.jenv/bin:~/.jenv/shims
 export PATH=$PATH:~/google-cloud-sdk/bin
 export PATH=$PATH:~/.rbenv/shims
 export PATH=$PATH:~/.nvm:~/.nvm/versions/node/v10.16.0/bin
 export PATH=$PATH:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin
+export PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin
+
+export HOMEBREW_PREFIX="/opt/homebrew";
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+export HOMEBREW_SHELLENV_PREFIX="/opt/homebrew";
+export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 export GOOGLE_APPLICATION_CREDENTIALS=~/.cloud-builder-key.json
 
