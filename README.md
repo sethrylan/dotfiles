@@ -7,7 +7,7 @@
 * Turn off smart quotes
 * Remap escape key
 * Key repeat
-
+* Dock and Menu Bar -> Clock -> use 24hr and show seconds
 
 ### Update Finder Prefernces
 * Show extensions
