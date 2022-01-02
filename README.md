@@ -79,7 +79,7 @@ See https://stackoverflow.com/a/60079965
 ### Git Prereqs
 
 ```shell
-ssh-keygen -t ed25519 -C “seth.rylan@gmail.com”
+ssh-keygen -t ed25519 -C "seth.rylan@gmail.com"
 
 cat >  ~/.ssh/config <<EOF
 
@@ -88,7 +88,7 @@ Host *.github.com
   IdentityFile ~/.ssh/id_ed25519
 EOF
 
-ssh-add -K ~/.ssh/id_ed25519
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 
 cat > ~/.gitconfig <<EOF
 [core]
@@ -113,7 +113,7 @@ EOF
 ```shell
 cd ~
 
-git clone https://github.com/sethrylan/dotfiles ~/.dotfiles
+git clone git@github.com:sethrylan/dotfiles.git ~/.dotfiles
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
