@@ -152,8 +152,9 @@ rbenv versions
 ..
 curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 ...
-rbenv install 2.7.3
-rbenv global 2.7.3
+rbenv install 2.7.5
+rbenv install 3.1.0
+rbenv global 2.7.5
 ```
 
 ### Setup Java with jenv
