@@ -1,21 +1,12 @@
 ## OSX Setup
-
 * Update OS
 
 ### Update Preferences
-* Reverse scroll
-* Turn off smart quotes
+```shell
+sh ./osx.sh
+```
+
 * Remap escape key
-* Key repeat
-* Dock and Menu Bar -> Clock -> use 24hr and show seconds
-
-### Update Finder Prefernces
-* Show extensions
-* Hide drives
-
-### Spotlight
-* Remove external drives
-
 
 ### Hostname
 
@@ -71,7 +62,6 @@ See https://stackoverflow.com/a/60079965
 ### VS Code
 
 * Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
-
 
 
 ## Setup
