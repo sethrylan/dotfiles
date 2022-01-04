@@ -17,9 +17,7 @@ alias sb='open -a /Applications/Sublime\ Text.app/'
 alias dstop='docker stop $(docker ps -a -q)' # Stop running containers
 alias dremove='docker rm -f $(docker ps -q)' # Stop & remove running containers
 
-alias ll='ls -la'   ## Use a long listing format ##
 alias ls='ls -G'
-
 
 ## a quick way to get out of current directory ##
 alias ..='cd ..'
@@ -34,8 +32,6 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 alias vi=vim
-alias svi='sudo vi'
-
 
 alias ports='netstat -tulanp'
 
