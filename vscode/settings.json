@@ -52,7 +52,7 @@
     "workbench.startupEditor": "none",
     "workbench.settings.editor": "json",
     "workbench.editor.showIcons": false,
-    "workbench.sideBar.location": "left",
+    "workbench.sideBar.location": "right",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
