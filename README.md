@@ -100,23 +100,12 @@ EOF
 
 ## Install
 
+### Clone
+
 ```shell
 cd ~
 
 git clone git@github.com:sethrylan/dotfiles.git ~/.dotfiles
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-brew install \
-      gnupg \
-      go \
-      tldr gist howdoi gotop tokei \
-      gnuplot asciinema screenfetch \
-      watchexec re-flex watch \
-      octant aspell \
-      jq dos2unix wget wrk skaffold dive docker-ls telnet \
-      rbenv jenv
 ```
 
 ### Set up dotfiles links
@@ -132,6 +121,14 @@ EOF
 cat > ~/.zshrc <<EOF
 source ~/.dotfiles/zsh/zshrc.zsh
 EOF
+```
+
+### Install
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+brew bundle --file ~/.dotfiles/Brewfile
 ```
 
 
