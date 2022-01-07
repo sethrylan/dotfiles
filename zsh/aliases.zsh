@@ -1,6 +1,6 @@
 
 
-alias gistit='gist -Pcp -f output | xargs open'
+alias gistit='pbpaste | gh gist create - | xargs open'
 alias top='gotop'
 alias how='howdoi'
 alias cleandsstore="find . -type f -name '*.DS_Store' -ls -delete" # Recursively delete `.DS_Store` files
