@@ -22,3 +22,4 @@ brew "docker-ls"     # docker registry inspector
 brew "telnet"
 brew "rbenv"
 brew "jenv"
+brew "tree"
