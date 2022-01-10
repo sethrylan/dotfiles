@@ -23,3 +23,4 @@ brew "telnet"
 brew "rbenv"
 brew "jenv"
 brew "tree"
+brew "git"           # get the latest git
