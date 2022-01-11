@@ -50,8 +50,9 @@ defaults write -g AppleShowAllExtensions -bool true
 # disable warning when changing file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# touch bar shows expanded control strip
-defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
+# touch bar shows function keys (switch with `fullControlStrip`)
+defaults write com.apple.touchbar.agent PresentationModeGlobal functionKeys
+pkill "Touch Bar agent"; killall "ControlStrip";
 
 # Third-party apps
 ##################
