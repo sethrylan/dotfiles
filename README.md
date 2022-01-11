@@ -41,11 +41,9 @@ See https://stackoverflow.com/a/60079965
 
 ### Better Touch Tool
 
-4 Finger Swipe Left = Maximize window left
-4 Finger Swipe Up = Maximize Window
-4 FInger Swipe Right = Maximize Window Right
-4 Finge Sipe Down = Minimize Window below curosr
-4 Finger Tap = Mission control
+![bettertouchtool](bettertouchtool.png)
+
+
 
 ### Typora
 
@@ -152,7 +150,6 @@ ln -s ~/.dotfiles/sublime/User ~/Library/Application\ Support/Sublime\ Text/Pack
 ## VS Code extensions
 
 From https://wiki.nikitavoloboev.xyz/text-editors/vs-code/vs-code-extensions
-
 
 
 
