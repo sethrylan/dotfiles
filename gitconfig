@@ -1,3 +1,6 @@
+# Local/private config goes in the include
+[include]
+        path = ~/.gitconfig.local
 [core]
         trustctime = false
         ignorecase = false
@@ -12,11 +15,9 @@
         incoming = log --graph --decorate master..origin/master
 [pull]
         rebase = false
-[user]
-	email = seth.rylan@gmail.com
 [init]
-	defaultBranch = main
+        defaultBranch = main
 [merge]
-	conflictStyle = diff3
+        conflictStyle = diff3
 [checkout]
         workers = 0
