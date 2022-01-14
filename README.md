@@ -31,6 +31,7 @@ killall Finder
 
 * Chrome Canary
 * iStat Menus
+* [Rectangle](https://rectangleapp.com/)
 
 
 ### iTerm2
@@ -38,10 +39,6 @@ killall Finder
 Preferences ➔ Profiles ➔ Keys ➔ left option as Esc+, and then Profiles ➔ Keys ➔ Mappings to add option+left as Esc+b, and option+right as Esc+f
 
 See https://stackoverflow.com/a/60079965
-
-### Better Touch Tool
-
-![bettertouchtool](bettertouchtool.png)
 
 
 
