@@ -24,8 +24,14 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 # source <(kubectl completion bash)
 
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+if (( $+commands[jenv] ))
+then
+  eval "$(jenv init -)"
+fi
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if (( $+commands[rbenv] ))
+then
+  eval "$(rbenv init -)"
+fi
 
 typeset -U PATH # Remove duplicates in $PATH
