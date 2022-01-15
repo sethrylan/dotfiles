@@ -17,15 +17,6 @@ sudo scutil --set ComputerName $HOSTNAME
 dscacheutil -flushcache
 ```
 
-### Xcode
-
-```shell
-# Install xcode cli Tools
-xcode-select --install
-defaults write com.apple.Finder AppleShowAllFiles true
-killall Finder
-```
-
 ## Other tools
 
 * Chrome Canary
@@ -73,6 +64,12 @@ Host *.github.com
 EOF
 
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+
+cat > ~/.gitconfig.local <<EOF
+[user]
+  name = <name>
+  email = <email>
+EOF
 ```
 
 

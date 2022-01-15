@@ -65,6 +65,9 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.touchbar.agent PresentationModeGlobal functionKeys
 pkill "Touch Bar agent"; killall "ControlStrip";
 
+defaults write com.apple.Finder AppleShowAllFiles true
+killall Finder
+
 # Third-party apps
 ##################
 
