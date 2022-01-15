@@ -1,0 +1,7 @@
+if test ! "$(uname)" = "Darwin"
+  then
+  exit 0
+fi
+
+echo "››› updating OS"
+sudo softwareupdate -i -a

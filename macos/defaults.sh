@@ -1,7 +1,18 @@
 #!/usr/bin/env bash
 
+echo "››› setting OS defaults"
+
 # close system preferences to keep it from overriding stuff
 osascript -e 'tell application "System Preferences" to quit'
+
+# Show the ~/Library folder.
+chflags nohidden ~/Library
+
+# Use AirDrop over every interface.
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+
+# Always open everything in Finder's list view.
+defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
 # translucent dock icons for hidden apps
 defaults write com.apple.dock showhidden -bool true
@@ -23,7 +34,7 @@ defaults write com.apple.menuextra.clock ShowSeconds -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerVertSwipeGesture -int 0
 
 # fast keyboard repeat rate
-defaults write -g KeyRepeat -int 2
+defaults write -g KeyRepeat -int 1
 defaults write -g InitialKeyRepeat -int 15
 
 # disable text correction

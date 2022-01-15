@@ -1,9 +1,8 @@
 ## OSX Setup
-* Update OS
 
-### Update Preferences
 ```shell
-sh ./osx.sh
+sh ./macos/install.sh
+sh ./macos/defaults.sh
 ```
 
 * Remap escape key
