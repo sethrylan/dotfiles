@@ -1,8 +1,11 @@
 tap "homebrew/bundle"
 
+brew "ack"
+brew "readline"
 brew "gnupg"
 brew "go"
 brew "tldr"          # tldr-pages
+brew "grc"           # colorize log files
 brew "gh"            # github cli
 brew "howdoi"        # `howdoi print stack trace python
 brew "gotop"         # https://github.com/xxxserxxx/gotop/wiki/Micro-Blog
