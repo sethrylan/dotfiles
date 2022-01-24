@@ -21,3 +21,5 @@
         conflictStyle = diff3
 [checkout]
         workers = 0
+[gpg]
+	program = gpg
