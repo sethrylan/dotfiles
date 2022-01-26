@@ -74,4 +74,5 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "terminal.integrated.scrollback": 99999,
+    "editor.inlineSuggest.enabled": true,
 }

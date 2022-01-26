@@ -18,7 +18,7 @@
 [init]
         defaultBranch = main
 [merge]
-        conflictStyle = diff3
+        conflictStyle = zdiff3
 [checkout]
         workers = 0
 [gpg]
