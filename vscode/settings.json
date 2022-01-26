@@ -73,4 +73,5 @@
         "editor.autoClosingBrackets": "always",
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "terminal.integrated.scrollback": 99999,
 }
