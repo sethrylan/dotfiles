@@ -2,7 +2,8 @@ tap "homebrew/bundle"
 
 brew "ack"
 brew "readline"
-brew "gnupg"
+brew "gpg"
+brew "pinentry-mac"
 brew "go"
 brew "tldr"          # tldr-pages
 brew "grc"           # colorize log files

@@ -69,6 +69,13 @@ cat > ~/.gitconfig.local <<EOF
 [user]
   name = <name>
   email = <email>
+  signingkey = <key from >
+[commit]
+  gpgsign = true
+EOF
+
+cat > ~/.gnupg/gpg-agent.conf <<EOF
+pinentry-program /usr/local/bin/pinentry-mac
 EOF
 ```
 
