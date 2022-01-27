@@ -1,6 +1,7 @@
 #!/bin/env zsh
 
 source ./zsh/zshrc.zsh
+git config --global commit.gpgsign true
 git config --global merge.conflictStyle zdiff3
 git config --global alias.s status
 git config --global alias.co checkout
