@@ -1,3 +1,5 @@
+#!/bin/env zsh
+
 source ./zsh/zshrc.zsh
 git config --local merge.conflictStyle zdiff3
 git config --local alias.s status
