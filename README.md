@@ -1,8 +1,10 @@
 ## OSX Setup
 
 ```shell
-sh ./macos/install.sh
-sh ./macos/defaults.sh
+macos/install.sh
+macos/defaults.sh
+sudo softwareupdate -i -a
+xcode-select --install
 ```
 
 * Remap escape key
