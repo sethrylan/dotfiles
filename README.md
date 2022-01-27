@@ -77,6 +77,10 @@ EOF
 cat > ~/.gnupg/gpg-agent.conf <<EOF
 pinentry-program /usr/local/bin/pinentry-mac
 EOF
+
+cat > ~/.gnupg/gpg.conf <<EOF
+use-agent
+EOF
 ```
 
 
