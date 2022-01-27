@@ -1,4 +1,3 @@
 ZSH_THEME="robbyrussell"
 
-source $HOME/.oh-my-zsh/oh-my-zsh.sh
-
+[ -s "$HOME/.oh-my-zsh/oh-my-zsh.sh" ] && source $HOME/.oh-my-zsh/oh-my-zsh.sh # This loads oh-my-zsh
