@@ -1,5 +1,9 @@
-source ~/.dotfiles/zsh/env.zsh
-source ~/.dotfiles/zsh/options.zsh
-source ~/.dotfiles/zsh/aliases.zsh
-source ~/.dotfiles/zsh/functions.zsh
-source ~/.dotfiles/zsh/ohmy.zsh
+#!/bin/env zsh
+
+PREFIX="${funcsourcetrace[1]%/*}"
+
+source $PREFIX/env.zsh
+source $PREFIX/options.zsh
+source $PREFIX/aliases.zsh
+source $PREFIX/functions.zsh
+source $PREFIX/ohmy.zsh
