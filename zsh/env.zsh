@@ -5,6 +5,7 @@ export PATH=$PATH:~/.rbenv/shims
 export PATH=$PATH:~/.nvm:~/.nvm/versions/node/v10.16.0/bin
 export PATH=$PATH:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin
 export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH   # prefer homebrew installs
+export PATH=~/.dotfiles/bin:$PATH
 
 export HOMEBREW_PREFIX="/opt/homebrew";
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar";

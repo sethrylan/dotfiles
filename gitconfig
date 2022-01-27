@@ -22,4 +22,4 @@
 [checkout]
         workers = 0
 [gpg]
-	program = gpg
+        program = gpg

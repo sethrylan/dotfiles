@@ -4,7 +4,7 @@ if test ! "$(uname)" = "Darwin"
 fi
 
 # Install xcode cli Tools
-xcode-select --install
+# xcode-select --install
 
-echo "››› updating OS"
-sudo softwareupdate -i -a
+# echo "››› updating OS"
+# sudo softwareupdate -i -a
