@@ -1,4 +1,4 @@
-#!/bin/env zsh
+#!/usr/bin/env zsh
 
 source ./zsh/zshrc.zsh
 git config --global commit.gpgsign true

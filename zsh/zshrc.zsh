@@ -1,4 +1,4 @@
-#!/bin/env zsh
+#!/usr/bin/env zsh
 
 PREFIX="${funcsourcetrace[1]%/*}"
 
