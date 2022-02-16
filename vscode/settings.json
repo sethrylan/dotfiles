@@ -76,4 +76,16 @@
     "terminal.integrated.scrollback": 99999,
     "editor.inlineSuggest.enabled": true,
     "terminal.integrated.defaultProfile.linux": "zsh",
+    "csharp.showOmnisharpLogOnError": false,
+    "csharp.maxProjectFileCountForDiagnosticAnalysis": 1,
+    "omnisharp.enableMsBuildLoadProjectsOnDemand": true,
+    "omnisharp.useModernNet": true,
+    "omnisharp.enableAsyncCompletion": true,
+    "omnisharp.useGlobalMono": "always",
+    "omnisharp.enableDecompilationSupport": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "cSpell.userWords": [
+        "Kusto"
+    ],
+    "omnisharp.enableImportCompletion": true,
 }
