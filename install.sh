@@ -2,7 +2,7 @@
 
 source ./zsh/zshrc.zsh
 git config --global commit.gpgsign true
-git config --global merge.conflictStyle zdiff3
+git config --global merge.conflictStyle diff3
 git config --global alias.s status
 git config --global alias.co checkout
 git config --global alias.lol "log --graph --oneline --decorate"
