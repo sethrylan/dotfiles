@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
-source ./zsh/zshrc.zsh
+dir=$(dirname "$0")
+source $dir/zsh/zshrc.zsh
 git config --global commit.gpgsign true
 git config --global merge.conflictStyle diff3
 git config --global alias.s status
