@@ -9,3 +9,4 @@ git config --global alias.co checkout
 git config --global pull.ff only
 git config --global alias.lol "log --graph --oneline --decorate"
 git config --global alias.ll "log --pretty=format:\"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn] %Cgreen%cr\" --decorate --numstat"
+alias k='kubectl'
