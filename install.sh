@@ -16,3 +16,4 @@ EOF
 
 git config --global commit.gpgsign true
 git config --global merge.conflictStyle diff3
+git config --global gpg.program "/.codespaces/bin/gh-gpgsign"
