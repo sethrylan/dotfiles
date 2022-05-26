@@ -2,15 +2,16 @@
 # Install for codespaces
 
 dir=$(dirname "$0")
+DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles/
 
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
+ln -s $DOTFILES/gitconfig ~/.gitconfig
 
 cat > ~/.zshenv <<EOF
-source ~/.dotfiles/zsh/env.zsh
+source $DOTFILES/zsh/env.zsh
 EOF
 
 cat > ~/.zshrc <<EOF
-source ~/.dotfiles/zsh/zshrc.zsh
+source $DOTFILES/zsh/zshrc.zsh
 EOF
 
 git config --global commit.gpgsign true
