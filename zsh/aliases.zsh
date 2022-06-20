@@ -1,5 +1,5 @@
 
-alias kustom='docker run --rm -i -v "$(pwd):/deploy" k8s.gcr.io/kustomize/kustomize:v4.5.5'
+alias kus='docker run --rm -i -v "$(pwd):/deploy" k8s.gcr.io/kustomize/kustomize:v4.5.5'
 
 alias gistit='pbpaste | gh gist create - | xargs open'
 alias top='gotop'
