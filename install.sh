@@ -9,9 +9,9 @@ git config --global core.ignorecase false
 git config --global alias.s status
 git config --global alias.co checkout
 git config --global alias.lol 'log --graph --oneline --decorate'
-git config --global alias.ll 'log --pretty=format:\"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn] %Cgreen%cr\" --decorate --numstat'
-git config --global alias.lnc 'log --pretty=format:\"%h %s [%cn]\"'
-git config --global alias.lg 'log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset\" --abbrev-commit'
+git config --global alias.ll 'log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn] %Cgreen%cr" --decorate --numstat'
+git config --global alias.lnc 'log --pretty=format:"%h %s [%cn]"'
+git config --global alias.lg 'log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset" --abbrev-commit'
 git config --global pull.rebase false
 git config --global checkout.workers  0
 git config --global commit.gpgsign true
