@@ -1,5 +1,6 @@
 
 alias kus='docker run --rm -i --volume "$(pwd):/workdir" --workdir /workdir k8s.gcr.io/kustomize/kustomize:v4.5.5'
+alias k9s='docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s:latest'
 
 alias gistit='pbpaste | gh gist create - | xargs open'
 alias top='gotop'
