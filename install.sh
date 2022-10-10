@@ -17,6 +17,7 @@ git config --global checkout.workers  0
 git config --global commit.gpgsign true
 git config --global merge.conflictStyle diff3
 git config --global gpg.program "/.codespaces/bin/gh-gpgsign"
+git config --global push.autoSetupRemote true
 
 
 cat > ~/.zshenv <<EOF
