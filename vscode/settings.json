@@ -1,4 +1,5 @@
 {
+    "terminal.integrated.shellIntegration.enabled": false,
     "editor.codeActionsOnSave": {
         // "source.organizeImports": true
     },
@@ -7,7 +8,6 @@
     "editor.scrollBeyondLastLine": false,
     "editor.occurrencesHighlight": false,
     "editor.overviewRulerBorder": false,
-    "editor.renderIndentGuides": true,
     "editor.folding": false,
     "editor.snippetSuggestions": "top",
     "editor.lightbulb.enabled": false,
@@ -85,6 +85,7 @@
     "omnisharp.enableDecompilationSupport": true,
     "omnisharp.enableRoslynAnalyzers": true,
     "cSpell.userWords": [
+        "Kubernetes",
         "Kusto"
     ],
     "omnisharp.enableImportCompletion": true,
@@ -96,4 +97,6 @@
     },
     "githubPullRequests.terminalLinksHandler": "github",
     "terminal.integrated.enableMultiLinePasteWarning": false,
+    "editor.guides.indentation": true,
+    "githubPullRequests.pullBranch": "never",
 }
