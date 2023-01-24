@@ -6,7 +6,7 @@ alias gistit='pbpaste | gh gist create - | xargs open'
 alias top='gotop'
 alias how='howdoi'
 alias cleandsstore="find . -type f -name '*.DS_Store' -ls -delete" # Recursively delete `.DS_Store` files
-alias rec='asciinema rec'
+alias rec='docker run --rm -ti -v "$HOME/.config/asciinema":/root/.config/asciinema asciinema/asciinema'
 
 alias g='git'
 alias gnvm="git reset --soft HEAD~1"  # undo commit https://twitter.com/bencodezen/status/1371564043278946305
