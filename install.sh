@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+
 # Install for codespaces
 
 dir=$(dirname "$0")
@@ -28,3 +29,4 @@ cat > ~/.zshrc <<EOF
 source $DOTFILES/zsh/zshrc.zsh
 EOF
 
+export KUBE_EDITOR='code --wait'
