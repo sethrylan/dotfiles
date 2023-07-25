@@ -3,7 +3,7 @@
 # Install for codespaces
 
 dir=$(dirname "$0")
-DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles/
+DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
 
 git config --global core.trustctime false
 git config --global core.ignorecase false
@@ -25,7 +25,7 @@ cat > ~/.zshenv <<EOF
 source $DOTFILES/zsh/env.zsh
 EOF
 
-cat > ~/.zshrc <<EOF
+cat >> ~/.zshrc <<EOF
 source $DOTFILES/zsh/zshrc.zsh
 EOF
 
