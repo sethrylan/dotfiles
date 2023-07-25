@@ -17,11 +17,6 @@ Wj() {
     watchexec -w run.js node run.js
 }
 
-# git clone and cd instantly to cloned repo. gcd <git-url>
-gcd() {
-   git clone "$(pbpaste)" && cd "${1##*/}"
-}
-
 # ram <process-name> - Find how much RAM a process is taking.
 ram() {
   local sum
