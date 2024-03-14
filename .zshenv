@@ -14,6 +14,8 @@ export HOMEBREW_SHELLENV_PREFIX="/opt/homebrew";
 export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
+export KUBE_EDITOR='code --wait'
+
 export GOOGLE_APPLICATION_CREDENTIALS=~/.cloud-builder-key.json
 
 # export GOPATH="$(go env GOPATH)" # Go
