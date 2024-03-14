@@ -23,4 +23,4 @@
 [includeIf "gitdir:/workspaces/"]
         path = ~/.gitconfig.codespaces
 [include]
-        path = ~/.gitconfig.local
+        path = ~/.gitconfig.local   # if it exists, ~/.gitconfig.local is any extra config settings
