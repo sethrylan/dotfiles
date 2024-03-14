@@ -5,6 +5,8 @@
 dir=$(dirname "$0")
 DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
 
+cp $DOTFILES/.gitconfig.codespaces ~
+
 cat > ~/.zshenv <<EOF
 source $DOTFILES/zsh/env.zsh
 EOF
