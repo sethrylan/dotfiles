@@ -100,21 +100,16 @@ git clone git@github.com:sethrylan/dotfiles.git ~/.dotfiles
 
 ```shell
 ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
-
-cat > ~/.zshenv <<EOF
-source ~/.dotfiles/zsh/env.zsh
-EOF
-
-cat > ~/.zshrc <<EOF
-source ~/.dotfiles/zsh/zshrc.zsh
-EOF
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/.zshenv ~/.zshenv
 ```
 
-### Install
+### Installs
 ```shell
-sh script/install
+sh macos/install.sh
+sh homebrew/install.sh
+sh node/install.sh
 ```
 
 
