@@ -33,7 +33,7 @@
         "**/.project": true,
         "**/.settings": true
     },
-    "files.trimTrailingWhitespace": true,
+    "files.trimTrailingWhitespace": false,
     "files.insertFinalNewline": true,
     "files.eol": "\n",
     "explorer.confirmDelete": false,
@@ -86,7 +86,6 @@
         "Kubernetes",
         "Kusto"
     ],
-    "omnisharp.enableImportCompletion": true,
     "github.copilot.enable": {
         "*": true,
         "yaml": true,
@@ -102,5 +101,6 @@
     },
     "editor.renderWhitespace": "all",
     "hediet.vscode-drawio.resizeImages": null,
+    "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
     "window.zoomLevel": 1,
 }
