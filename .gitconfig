@@ -21,6 +21,8 @@
         conflictStyle = diff3
 [checkout]
         workers = 0
+[column]
+        ui = auto
 [gpg]
         program = gpg
 [includeIf "gitdir:/workspaces/"]
