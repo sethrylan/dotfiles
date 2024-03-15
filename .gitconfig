@@ -10,6 +10,7 @@
         lg = log --color --graph --pretty=format:\"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset\" --abbrev-commit
         outgoing = log --graph --decorate origin/master..master
         incoming = log --graph --decorate master..origin/master
+        blawm = blame -w -C -C -C
 [pull]
         rebase = false
 [init]
