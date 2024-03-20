@@ -17,6 +17,8 @@
         defaultBranch = main
 [rerere]
         enabled = true
+[rebase]
+        updateRefs = true
 [merge]
         conflictStyle = diff3
 [checkout]
