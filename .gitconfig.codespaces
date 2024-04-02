@@ -1,6 +1,4 @@
 
-[commit]
-  gpgsign = true
 [gpg]
   program = "/.codespaces/bin/gh-gpgsign"
 [push]

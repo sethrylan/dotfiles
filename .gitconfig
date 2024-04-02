@@ -25,6 +25,10 @@
         workers = 0
 [column]
         ui = auto
+[push]
+        autoSetupRemote = true
+[commit]
+        gpgsign = true
 [includeIf "gitdir:/workspaces/"]
         path = ~/.gitconfig.codespaces
 [include]
