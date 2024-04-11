@@ -1,5 +1,3 @@
 
 [gpg]
   program = "/.codespaces/bin/gh-gpgsign"
-[push]
-  autoSetupRemote = true
