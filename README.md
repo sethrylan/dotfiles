@@ -56,32 +56,15 @@ See https://stackoverflow.com/a/60079965
 ### Git Prereqs
 
 ```shell
-ssh-keygen -t ed25519 -C "seth.rylan@gmail.com"
-
-cat >  ~/.ssh/config <<EOF
-
-Host *.github.com
-  AddKeysToAgent yes
-  IdentityFile ~/.ssh/id_ed25519
-EOF
-
-ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-
 cat > ~/.gitconfig.local <<EOF
 [user]
   name = <name>
   email = <email>
-  signingkey = <key from >
-[commit]
-  gpgsign = true
-EOF
-
-cat > ~/.gnupg/gpg-agent.conf <<EOF
-pinentry-program /usr/local/bin/pinentry-mac
-EOF
-
-cat > ~/.gnupg/gpg.conf <<EOF
-use-agent
+  signingkey = <from 1password>
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 EOF
 ```
 
