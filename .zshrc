@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 
+plugins=(git fzf)
 ZSH_THEME="robbyrussell"
 [ -s "$HOME/.oh-my-zsh/oh-my-zsh.sh" ] && source $HOME/.oh-my-zsh/oh-my-zsh.sh # This loads oh-my-zsh
 
@@ -58,7 +59,9 @@ HISTFILESIZE=100000               # big big history
 SAVEHIST=100000                   # Number of history entries to save to disk
 HISTFILE=~/.zsh_history
 HISTDUP=erase                     # Erase duplicates in the history file
+HIST_STAMPS="yyyy-mm-dd"
 
+setopt hist_ignore_space          # Do not record an event starting with a space.
 setopt hist_ignore_dups           # Ignore duplicates
 setopt append_history             # Append history to the history file (no overwriting)
 setopt share_history              # Share history across terminals
