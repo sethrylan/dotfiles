@@ -27,6 +27,8 @@ alias sb='open -a /Applications/Sublime\ Text.app/'
 alias dstop='docker stop $(docker ps -a -q)' # Stop running containers
 alias dremove='docker rm -f $(docker ps -q)' # Stop & remove running containers
 
+alias q='llm "Answer in as few words as possible. Use a brief style with short replies." -m gpt-4o-mini "$*"'
+
 alias ls='ls -G'
 
 ## a quick way to get out of current directory ##

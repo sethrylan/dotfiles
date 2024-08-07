@@ -29,6 +29,6 @@ brew "jenv"
 brew "tree"
 brew "git"           # get the latest git
 brew "azure-cli"
-
+brew "llm"
 
 cask "raycast"
