@@ -9,8 +9,6 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 export KUBE_EDITOR='code --wait'
 
-# export GOOGLE_APPLICATION_CREDENTIALS=~/.cloud-builder-key.json
-
 if (( $+commands[go] ))
 then
   export GOPATH="$(go env GOPATH)" # Go
