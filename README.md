@@ -86,6 +86,10 @@ ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.zshenv ~/.zshenv
+mkdir -p ~/.config/fish/functions
+ln -s ~/.dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
+ln -s ~/.dotfiles/.config/fish/fish_variables ~/.config/fish/fish_variables
+ln -s ~/.dotfiles/.config/fish/functions/ ~/.config/fish/functions/
 ```
 
 ### Installs
@@ -94,7 +98,6 @@ sh macos/install.sh
 sh homebrew/install.sh
 sh node/install.sh
 ```
-
 
 ### Setup Ruby with rbenv
 
