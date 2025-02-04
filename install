@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+## This file is run for codespaces.
+
+if ! [ -x "$(command -v fish)" ]; then
+  if [ -x "$(command -v apt)" ]; then
+    echo "››› installing fish"
+    sudo apt update && sudo apt-get install -y fish
+  fi
+fi
+
+temp=$( realpath "$0"  )
+DIR=$( dirname "$temp" )
+echo "››› installing .dotfiles from $DIR"
+
+## There may already be a ~/.config/ directory, so we symlink everything under it.
+ln -sf "$DIR/git/.gitconfig" ~/.gitconfig
+ln -sf "$DIR"/git/.gitconfig.codespaces ~/.gitconfig.codespaces
+ln -sf "$DIR"/zsh/.zshrc ~/.zshrc
+ln -sf "$DIR"/zsh/.zshenv ~/.zshenv
+mkdir -p ~/.config/fish
+ln -sf "$DIR"/fish/config.fish ~/.config/fish/config.fish
+ln -sf "$DIR"/fish/fish_variables ~/.config/fish/fish_variables
+mkdir -p ~/.config/fish/functions && ln -sf "$DIR"/fish/functions/ ~/.config/fish/functions/

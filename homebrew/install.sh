@@ -16,6 +16,4 @@ fi
 
 # Run Homebrew through the Brewfile
 echo "› brew bundle"
-brew bundle
-
-exit 0
+brew ./homebrew/bundle

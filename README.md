@@ -33,22 +33,24 @@ Preferences ➔ Profiles ➔ Keys ➔ left option as Esc+, and then Profiles ➔
 See https://stackoverflow.com/a/60079965
 
 
-
-### Typora
-
-* General -> On Launch -> Restore last closed
-* Appearance -> Themes -> Use separate theme
-* Image
-
-![Image](./typora-image.png)
-
-
 ### Fonts
-[JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+
+[Mono Sans](https://github.com/mona-sans)
 
 ### VS Code
 
 * Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
+
+## VS Code extensions
+
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [GitLens](https://arc.net/l/quote/hmjppduv)
+- [GitHub Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)
+- [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
+- [shellcheck](https://github.com/vscode-shellcheck/vscode-shellcheck)
+- [VSCode Essentials](https://marketplace.visualstudio.com/items?itemName=jabacchetta.vscode-essentials)
+- [GitHub](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-github)
+- [Markdown Preview GitHub Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
 
 
 ## Setup
@@ -68,33 +70,28 @@ cat > ~/.gitconfig.local <<EOF
 EOF
 ```
 
-
 ## Install
 
 ### Clone
 
 ```shell
 cd ~
-
 git clone git@github.com:sethrylan/dotfiles.git ~/.dotfiles
 ```
 
 ### Set up dotfiles links
 
 ```shell
-ln -s ~/.dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.zshenv ~/.zshenv
-mkdir -p ~/.config/fish/functions
-ln -s ~/.dotfiles/.config/fish/config.fish ~/.config/fish/config.fish
-ln -s ~/.dotfiles/.config/fish/fish_variables ~/.config/fish/fish_variables
-ln -s ~/.dotfiles/.config/fish/functions/ ~/.config/fish/functions/
+bash ./install
+```
+
+```shell
+ln ./vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ```
 
 ### Installs
+
 ```shell
-sh macos/install.sh
 sh homebrew/install.sh
 sh node/install.sh
 ```
@@ -117,25 +114,8 @@ rbenv global 2.7.5
 jenv versions
 ...
 
-...
+```shell
 jenv add /Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home
 ...
 jenv global 11.0
 ```
-
-
-### Sublime
-* Install package control
-
-```shell
-ln -s ~/.dotfiles/sublime/User ~/Library/Application\ Support/Sublime\ Text/Packages/
-```
-
-## VS Code extensions
-
-From https://wiki.nikitavoloboev.xyz/text-editors/vs-code/vs-code-extensions
-
-
-
-
-
