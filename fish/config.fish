@@ -5,15 +5,17 @@
 ######################### Environment #########################
 ###############################################################
 
-export KUBE_EDITOR='code --wait'
-export GOPATH="$(go env GOPATH)"
 fish_add_path ~/.nvm
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 fish_add_path ~/.dotfiles/bin
 fish_add_path ~/bin
-fish_add_path $GOPATH
 
+if type -q go
+  fish_add_path (go env GOPATH)/bin
+end
+
+export KUBE_EDITOR='code --wait'
 
 ###############################################################
 ########################### Aliases ###########################
