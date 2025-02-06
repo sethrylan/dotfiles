@@ -119,3 +119,7 @@ jenv add /Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home
 ...
 jenv global 11.0
 ```
+
+### Raycast
+
+- [Oblique Strategies](https://github.com/raycast/extensions/blob/be2ed8cc32c1a225ea8b3bde9bf708e8d9971b54/extensions/oblique-strategies/README.md)
