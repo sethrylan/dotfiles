@@ -19,7 +19,7 @@ export KUBE_EDITOR='code --wait'
 ###############################################################
 ########################### Aliases ###########################
 ###############################################################
-alias kus='docker run --rm -i --volume "$(pwd):/workdir" --workdir /workdir k8s.gcr.io/kustomize/kustomize:v4.5.5'
+alias kus='docker run --rm -i --volume "(pwd):/workdir" --workdir /workdir k8s.gcr.io/kustomize/kustomize:v4.5.5'
 alias k9s='docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s:latest'
 
 alias gistit='pbpaste | gh gist create - | xargs open'
@@ -36,8 +36,8 @@ alias greset='git reset --soft HEAD^' # Undo last commit, but don't throw away y
 alias k='kubectl'
 alias sb='open -a /Applications/Sublime\ Text.app/'
 
-alias dstop='docker stop $(docker ps -a -q)' # Stop running containers
-alias dremove='docker rm -f $(docker ps -q)' # Stop & remove running containers
+alias dstop='docker stop (docker ps -a -q)' # Stop running containers
+alias dremove='docker rm -f (docker ps -q)' # Stop & remove running containers
 
 alias q='llm "Answer in as few words as possible. Use a brief style with short replies." -m gpt-4o-mini "$argv"'
 
