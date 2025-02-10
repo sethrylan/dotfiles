@@ -25,14 +25,6 @@ dscacheutil -flushcache
 * iStat Menus
 * [Rectangle](https://rectangleapp.com/)
 
-
-### iTerm2
-
-Preferences ➔ Profiles ➔ Keys ➔ left option as Esc+, and then Profiles ➔ Keys ➔ Mappings to add option+left as Esc+b, and option+right as Esc+f
-
-See https://stackoverflow.com/a/60079965
-
-
 ### Fonts
 
 [Mono Sans](https://github.com/mona-sans)
