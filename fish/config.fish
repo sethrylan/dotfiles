@@ -4,14 +4,14 @@
 ######################### Environment #########################
 ###############################################################
 
-fish_add_path ~/.nvm
-fish_add_path /opt/homebrew/bin
-fish_add_path /opt/homebrew/sbin
-fish_add_path ~/.dotfiles/bin
-fish_add_path ~/bin
+set PATH $PATH ~/.nvm
+set PATH $PATH /opt/homebrew/bin
+set PATH $PATH /opt/homebrew/sbin
+set PATH $PATH ~/.dotfiles/bin
+set PATH $PATH ~/bin
 
 if type -q go
-  fish_add_path (go env GOPATH)/bin
+  set PATH $PATH (go env GOPATH)/bin
 end
 
 export KUBE_EDITOR='code --wait'
