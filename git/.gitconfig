@@ -33,3 +33,5 @@
         path = ~/.gitconfig.codespaces
 [include]
         path = ~/.gitconfig.local   # if it exists, ~/.gitconfig.local is any extra config settings
+[http]
+	postBuffer = 524288000
