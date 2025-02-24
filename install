@@ -9,6 +9,19 @@ if ! [ -x "$(command -v fish)" ]; then
   fi
 fi
 
+if ! [ -x "$(command -v mise)" ]; then
+  if [ -x "$(command -v apt)" ]; then
+    echo "››› installing mise"
+    sudo apt update
+    sudo install -dm 755 /etc/apt/keyrings
+    wget -qO - https://mise.jdx.dev/gpg-key.pub | gpg --dearmor | sudo tee /etc/apt/keyrings/mise-archive-keyring.gpg 1> /dev/null
+    echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.gpg arch=amd64] https://mise.jdx.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
+    sudo apt update
+    sudo apt install -y mise
+  fi
+fi
+
+
 temp=$( realpath "$0"  )
 DIR=$( dirname "$temp" )
 echo "››› installing .dotfiles from $DIR"
