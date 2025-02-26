@@ -34,4 +34,13 @@
 [include]
         path = ~/.gitconfig.local   # if it exists, ~/.gitconfig.local is any extra config settings
 [http]
-	postBuffer = 524288000
+        postBuffer = 524288000
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+[diff]
+        algorithm = histogram
+[help]
+        autocorrect = prompt
+
