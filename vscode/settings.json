@@ -1,10 +1,12 @@
 {
   "terminal.integrated.shellIntegration.enabled": false,
   "editor.codeActionsOnSave": {
-      // "source.organizeImports": true
+    // "source.organizeImports": true
   },
   "editor.formatOnSave": false,
-  "editor.rulers": [ 120 ],
+  "editor.rulers": [
+    120
+  ],
   "editor.suggestSelection": "first",
   "editor.scrollBeyondLastLine": false,
   "editor.occurrencesHighlight": "off",
@@ -19,20 +21,20 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 15,
   "search.exclude": {
-      "**/node_modules/": true,
-      "**/.git": true,
-      "**/.next": true,
-      "**/.DS_Store": true,
-      "**/package-lock.json": true,
-      "**/yarn.lock": true,
-      "vendor": true,
-      "**/npm-debug.log": true,
-      "**/dist": true,
-      "**/*.bs.js": true,
-      "**/.classpath": true,
-      "**/.factorypath": true,
-      "**/.project": true,
-      "**/.settings": true
+    "**/node_modules/": true,
+    "**/.git": true,
+    "**/.next": true,
+    "**/.DS_Store": true,
+    "**/package-lock.json": true,
+    "**/yarn.lock": true,
+    "vendor": true,
+    "**/npm-debug.log": true,
+    "**/dist": true,
+    "**/*.bs.js": true,
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true
   },
   "files.trimTrailingWhitespace": false,
   "files.insertFinalNewline": true,
@@ -55,31 +57,31 @@
   "workbench.editor.showIcons": false,
   "workbench.sideBar.location": "right",
   "workbench.editorAssociations": {
-      "*.ipynb": "jupyter-notebook"
+    "*.ipynb": "jupyter-notebook"
   },
   "go.toolsManagement.autoUpdate": true,
   "java.configuration.runtimes": [
-      {
-          "name": "JavaSE-11",
-          "path": "/Users/seth/.jenv/versions/11"
-      }
+    {
+      "name": "JavaSE-11",
+      "path": "/Users/seth/.jenv/versions/11"
+    }
   ],
   "redhat.telemetry.enabled": false,
   "svelte.enable-ts-plugin": true,
   "editor.detectIndentation": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "[typescript]": {
-      "editor.autoClosingBrackets": "always",
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.tabSize": 2
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
   },
   "[ruby]": {
-      "editor.insertSpaces": true,
-      "editor.tabSize": 2
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
   },
   "[javascript,json]": {
-      "editor.insertSpaces": true,
-      "editor.tabSize": 2
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
   },
   "editor.tabSize": 2,
   "terminal.integrated.scrollback": 99999,
@@ -96,31 +98,59 @@
   "omnisharp.enableDecompilationSupport": true,
   "omnisharp.enableRoslynAnalyzers": true,
   "cSpell.userWords": [
-      "Kubernetes",
-      "Kusto"
+    "Kubernetes",
+    "Kusto"
   ],
   "github.copilot.enable": {
-      "*": true,
-      "yaml": true,
-      "plaintext": false,
-      "markdown": true
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": true
   },
+  "markdown.extension.tableFormatter.enabled": false,
   "githubPullRequests.terminalLinksHandler": "github",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "editor.guides.indentation": true,
   "githubPullRequests.pullBranch": "never",
   "vs-kubernetes": {
-      "vs-kubernetes.minikube-show-information-expiration": "2022-11-25T19:54:53.420Z"
+    "vs-kubernetes.minikube-show-information-expiration": "2022-11-25T19:54:53.420Z"
   },
   "editor.renderWhitespace": "all",
   "hediet.vscode-drawio.resizeImages": null,
   "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
   "remote.autoForwardPortsSource": "hybrid",
   "gopls": {
-      "analyses": {
-          "simplifycompositelit": false
-      },
+    "analyses": {
+      "simplifycompositelit": false
+    },
   },
   "github.copilot.editor.enableAutoCompletions": true,
   "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "github.copilot.selectedCompletionModel": "",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "docker.extension.enableComposeLanguageServer": false,
+  "@azure.argTenant": "13453a5b-f9f9-4da2-80a0-8dbde396f866",
+  "datadog.staticAnalysis.notification.suppressOnboarding": true,
+  "chat.agent.maxRequests": 100,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "chat.detectParticipant.enabled": false,
+  "chat.tools.terminal.autoApprove": {
+    "sed": true,
+    "go": true
+  },
 }
