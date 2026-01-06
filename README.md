@@ -97,4 +97,5 @@ mise use --global python@3.12
 
 ### Raycast
 
+- [Datadog](https://github.com/zerowidth/raycast-datadog)
 - [Oblique Strategies](https://github.com/raycast/extensions/blob/be2ed8cc32c1a225ea8b3bde9bf708e8d9971b54/extensions/oblique-strategies/README.md)
