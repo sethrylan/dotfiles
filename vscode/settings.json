@@ -153,4 +153,10 @@
     "sed": true,
     "go": true
   },
+  "chat.tools.urls.autoApprove": {
+    "https://support.apple.com": {
+      "approveRequest": true,
+      "approveResponse": false
+    }
+  },
 }

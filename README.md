@@ -21,9 +21,8 @@ dscacheutil -flushcache
 
 ## Other tools
 
-* Chrome Canary
+* 1Password
 * iStat Menus
-* [Rectangle](https://rectangleapp.com/)
 
 ### Fonts
 
@@ -77,10 +76,6 @@ git clone git@github.com:sethrylan/dotfiles.git ~/.dotfiles
 bash ./install
 ```
 
-```shell
-ln ./vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-```
-
 ### Installs
 
 ```shell
@@ -88,28 +83,13 @@ sh homebrew/install.sh
 sh node/install.sh
 ```
 
-### Setup Ruby with rbenv
+### Setup mise
 
 ```shell
-rbenv versions
-..
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
-...
-rbenv install 2.7.5
-rbenv install 3.1.0
-rbenv global 2.7.5
-```
-
-### Setup Java with jenv
-
-```shell
-jenv versions
-...
-
-```shell
-jenv add /Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home
-...
-jenv global 11.0
+mise use --global node@22
+mise use --global ruby@3.4
+mise use --global java@21
+mise use --global python@3.12
 ```
 
 ### Raycast

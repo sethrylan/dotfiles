@@ -14,9 +14,6 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 # Always open everything in Finder's list view.
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
-# translucent dock icons for hidden apps
-defaults write com.apple.dock showhidden -bool true
-
 # hide recent apps
 defaults write com.apple.dock show-recents -bool false
 
