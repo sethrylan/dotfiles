@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 
+brew "fish"
 brew "ripgrep"
 brew "1password-cli"
 brew "ack"
