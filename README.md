@@ -21,6 +21,9 @@ dscacheutil -flushcache
 
 ## Other tools
 
+* Obsidian
+* Raycast
+* iTerm2
 * 1Password
 * iStat Menus
 
