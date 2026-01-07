@@ -48,5 +48,6 @@ brew install "docker-ls"     # docker registry inspector
 brew install "telnet"
 brew install "tree"
 brew install "git"           # get the latest git
+brew install git-lfs
 brew install "azure-cli"
 brew install "llm"
