@@ -56,7 +56,7 @@ cat > ~/.gitconfig.local <<EOF
 [user]
   name = <name>
   email = <email>
-  signingkey = <from 1password>
+  signingkey = <ssh-... from 1password>
 [gpg]
   format = ssh
 [gpg "ssh"]
