@@ -9,6 +9,7 @@ set PATH $PATH /opt/homebrew/bin
 set PATH $PATH /opt/homebrew/sbin
 set PATH $PATH ~/.dotfiles/bin
 set PATH $PATH ~/bin
+set PATH $HOME/.local/bin $PATH
 
 if type -q go
   set PATH $PATH (go env GOPATH)/bin
