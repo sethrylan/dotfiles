@@ -66,6 +66,6 @@ alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 alias pscpu='ps auxf | sort -nr -k 3'
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
  
-if [ -x "(command -v mise)" ]; then
+if type -q mise
   mise activate fish | source
 end
