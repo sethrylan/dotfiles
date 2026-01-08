@@ -8,6 +8,7 @@ export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 export KUBE_EDITOR='code --wait'
+export COPILOT_MODEL="claude-opus-4.5"
 
 if (( $+commands[go] ))
 then

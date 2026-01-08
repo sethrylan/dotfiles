@@ -16,6 +16,7 @@ if type -q go
 end
 
 export KUBE_EDITOR='code --wait'
+export COPILOT_MODEL="claude-opus-4.5"
 
 ###############################################################
 ########################### Aliases ###########################
