@@ -15,8 +15,10 @@ if type -q go
   set PATH $PATH (go env GOPATH)/bin
 end
 
-export KUBE_EDITOR='code --wait'
+export KUBE_EDITOR="code --wait"
+
 export COPILOT_MODEL="claude-opus-4.5"
+export ANTHROPIC_BASE_URL="http://localhost:4000"
 
 ###############################################################
 ########################### Aliases ###########################
