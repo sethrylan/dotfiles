@@ -1,0 +1,88 @@
+#!/usr/bin/env zsh
+#
+# Getting Started
+#
+# 1. Create a GitHub Personal Access Token with copilot permissions:
+#    https://github.com/settings/tokens/new?scopes=copilot&description=LiteLLM%20Copilot%20Proxy
+# 2. Store in 1password or macOS Keychain:
+#    1Password: op item create --title "litellm-copilot-token"  --vault "abc" --category "API Credential" --field "token=ghu_xxx_your_token"
+#    macOS Keychain: security add-generic-password -a "$USER" -s litellm-copilot-token -w "ghu_xxx_your_token"
+# 3. Install dependencies:
+#    python -m pip install --upgrade 'litellm[proxy]' backoff
+# 4. Update your bash or zsh profile and set ANTHROPIC_BASE_URL:
+#    export ANTHROPIC_BASE_URL="http://localhost:4000"
+#
+# Copilot model probe results (Jan 8 2026)
+#
+# | Model | Status | Notes |
+# | --- | --- | --- |
+# | gpt-4.1 | ✅ working | normal chat endpoint |
+# | gpt-4o | ✅ working | normal chat endpoint |
+# | gpt-5-mini | ✅ working | normal chat endpoint |
+# | grok-code-fast-1 | ✅ working | normal chat endpoint |
+# | claude-haiku-4.5 | ✅ working | normal chat endpoint |
+# | claude-opus-4.5 | ✅ working | normal chat endpoint |
+# | claude-sonnet-4 | ✅ working | normal chat endpoint |
+# | claude-sonnet-4.5 | ✅ working | normal chat endpoint |
+# | gemini-2.5-pro | ✅ working | normal chat endpoint |
+# | gemini-3-flash | ❌ model_not_supported |
+# | gemini-3-pro | ❌ model_not_supported |
+# | goldeneye | ❌ model_not_supported (likely internal-only) |
+# | gpt-5 | ✅ working | Responses API |
+# | gpt-5-codex | ✅ working | Responses API |
+# | gpt-5.1 | ✅ working | Responses API (returned model id `gpt-5.1-2025-11-13`) |
+# | gpt-5.1-codex | ✅ working | Responses API |
+# | gpt-5.1-codex-max | ✅ working | Responses API |
+# | gpt-5.1-codex-mini | ✅ working | Responses API |
+# | gpt-5.2 | ✅ working | Responses API (returned model id `gpt-5.2-2025-12-11`) |
+#
+#
+# Check if fzf is installed
+if ! command -v fzf &> /dev/null; then
+  echo "Error: fzf is not installed"
+  echo "Install it with: brew install fzf"
+  exit 1
+fi
+
+# List of supported models (from probe results above)
+MODELS=(
+  "gpt-4.1"
+  "gpt-4o"
+  "gpt-5-mini"
+  "grok-code-fast-1"
+  "claude-haiku-4.5"
+  "claude-opus-4.5"
+  "claude-sonnet-4"
+  "claude-sonnet-4.5"
+  "gemini-2.5-pro"
+  "gpt-5"
+  "gpt-5-codex"
+  "gpt-5.1"
+  "gpt-5.1-codex"
+  "gpt-5.1-codex-max"
+  "gpt-5.1-codex-mini"
+  "gpt-5.2"
+)
+
+if [[ -n "$COPILOT_MODEL" && " ${MODELS[*]} " == *" $COPILOT_MODEL "* ]]; then
+  # If COPILOT_MODEL is set and in the MODELS list, use it.
+  SELECTED_MODEL="$COPILOT_MODEL"
+else
+  # Otherwise, use fzf to select a model
+  SELECTED_MODEL=$(printf '%s\n' "${MODELS[@]}" | fzf --prompt="Select a model: " --height=40% --reverse)
+fi
+
+# Exit if no model was selected
+if [[ -z "$SELECTED_MODEL" ]]; then
+  echo "No model selected. Exiting."
+  exit 1
+fi
+echo "Starting litellm with model: $SELECTED_MODEL"
+
+# TOKEN=$(security find-generic-password -a "$USER" -s litellm-copilot-token -w) || exit 1
+TOKEN=$(op read --account my.1password.com op://private/litellm-copilot-token/token) || exit 1
+export GITHUB_TOKEN="$TOKEN"
+
+# Get the directory where this script is located
+CONFIG_FILE="$HOME/.dotfiles/.litellm-config.yaml"
+litellm --config "$CONFIG_FILE" --model github_copilot/$SELECTED_MODEL --port 4000
