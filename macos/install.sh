@@ -8,3 +8,6 @@ xcode-select --install
 
 # echo "››› updating OS"
 sudo softwareupdate -i -a
+
+## VSCode settings
+ln -sf "$DIR"/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
