@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# dot
+#
+# `dot` handles installation, updates, things like that. Run it periodically
+# to make sure you're on the latest and greatest.
+
+latest_codespace=$(gh codespace list --json name,createdAt --jq 'sort_by(.createdAt) | reverse | .[0].name')
+
+echo $latest_codespace
+
+gh codespace ssh -c $latest_codespace -- -R 4000:localhost:4000 -N
