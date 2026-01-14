@@ -8,6 +8,7 @@ model_list:
         Editor-Plugin-Version: "copilot-chat/0.22.4"
         Openai-Organization: "github-copilot"
         Openai-Intent: "conversation-panel"
+        Copilot-Vision-Request: "true"
 
 litellm_settings:
   drop_params: true
