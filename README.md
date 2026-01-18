@@ -93,6 +93,8 @@ mise use --global node@22
 mise use --global ruby@3.4
 mise use --global java@21
 mise use --global python@3.12
+mise use --global go@1.25.5
+mise use -g golangci-lint@v2.8.0
 ```
 
 ### Raycast
