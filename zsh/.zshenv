@@ -1,5 +1,5 @@
 
-export PATH=~/.nvm:/opt/homebrew/bin:/opt/homebrew/sbin:~/.dotfiles/bin:~/bin:$PATH
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:~/.dotfiles/bin:~/bin:$PATH
 export HOMEBREW_PREFIX="/opt/homebrew";
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
 export HOMEBREW_REPOSITORY="/opt/homebrew";
@@ -22,4 +22,9 @@ typeset -U PATH # Remove duplicates in $PATH
 if (( $+commands[rbenv] ))
 then
   eval "$(rbenv init - zsh)"
+fi
+
+if (( $+commands[mise] ))
+then
+  eval "$(mise activate zsh)"
 fi

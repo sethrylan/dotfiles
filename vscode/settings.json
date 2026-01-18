@@ -18,7 +18,7 @@
   "editor.cursorStyle": "line",
   "editor.fontFamily": "'Monaspace Neon', monospace",
   // "editor.fontFamily": "JetBrains Mono",
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
   "editor.fontSize": 15,
   "search.exclude": {
     "**/node_modules/": true,
@@ -159,4 +159,5 @@
       "approveResponse": false
     }
   },
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
 }
