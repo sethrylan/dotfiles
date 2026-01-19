@@ -19,6 +19,7 @@ echo "› brew bundle"
 
 
 brew install "fish"
+brew install "watch"
 brew install "ripgrep"
 brew install "1password-cli"
 brew install "ack"

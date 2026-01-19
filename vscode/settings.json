@@ -17,7 +17,6 @@
   "editor.minimap.enabled": false,
   "editor.cursorStyle": "line",
   "editor.fontFamily": "'Monaspace Neon', monospace",
-  // "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": false,
   "editor.fontSize": 15,
   "search.exclude": {
@@ -159,5 +158,5 @@
       "approveResponse": false
     }
   },
-  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
