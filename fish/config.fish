@@ -30,6 +30,7 @@ alias kus='docker run --rm -i --volume "(pwd):/workdir" --workdir /workdir k8s.g
 alias k9s='docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s:latest'
 
 alias gistit='pbpaste | gh gist create - | xargs open'
+alias gpr='gh pr create --fill-first --web'
 alias top='gotop'
 alias how='howdoi'
 alias cleandsstore="find . -type f -name '*.DS_Store' -ls -delete" # Recursively delete `.DS_Store` files
