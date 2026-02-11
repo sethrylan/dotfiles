@@ -106,7 +106,6 @@
     "plaintext": false,
     "markdown": true
   },
-  "markdown.extension.tableFormatter.enabled": false,
   "githubPullRequests.terminalLinksHandler": "github",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "editor.guides.indentation": true,

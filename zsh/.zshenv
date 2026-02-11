@@ -9,7 +9,7 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 export KUBE_EDITOR='code --wait'
 
-export COPILOT_MODEL="claude-opus-4.5"
+export COPILOT_MODEL="claude-opus-4.6"
 export ANTHROPIC_BASE_URL="http://localhost:4000"
 
 if (( $+commands[go] ))

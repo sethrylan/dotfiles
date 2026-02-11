@@ -8,11 +8,18 @@ if type -q mise
   mise activate fish | source
 end
 
-set PATH $PATH /opt/homebrew/bin
-set PATH $PATH /opt/homebrew/sbin
-set PATH $PATH ~/.dotfiles/bin
-set PATH $PATH ~/bin
-set PATH $HOME/.local/bin $PATH
+fish_add_path -m ~/.local/bin
+fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
+fish_add_path ~/.dotfiles/bin
+fish_add_path ~/bin
+fish_add_path ~/.temporalio/bin
+
+export GOPROXY="https://goproxy.githubapp.com/mod,https://proxy.golang.org/,direct"
+export GOPRIVATE=""
+export GONOPROXY=""
+export GONOSUMDB="github.com/github/*"
+
 
 if type -q go
   set PATH $PATH (go env GOPATH)/bin
@@ -20,7 +27,7 @@ end
 
 export KUBE_EDITOR="code --wait"
 
-export COPILOT_MODEL="claude-opus-4.5"
+export COPILOT_MODEL="claude-opus-4.6"
 export ANTHROPIC_BASE_URL="http://localhost:4000"
 
 ###############################################################
