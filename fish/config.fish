@@ -15,11 +15,12 @@ fish_add_path ~/.dotfiles/bin
 fish_add_path ~/bin
 fish_add_path ~/.temporalio/bin
 
-export GOPROXY="https://goproxy.githubapp.com/mod,https://proxy.golang.org/,direct"
-export GOPRIVATE=""
-export GONOPROXY=""
-export GONOSUMDB="github.com/github/*"
-
+if test -f ~/.netrc
+  export GOPROXY="https://goproxy.githubapp.com/mod,https://proxy.golang.org/,direct"
+  export GOPRIVATE=""
+  export GONOPROXY=""
+  export GONOSUMDB="github.com/github/*"
+end
 
 if type -q go
   set PATH $PATH (go env GOPATH)/bin
