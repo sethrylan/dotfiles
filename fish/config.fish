@@ -37,6 +37,8 @@ export ANTHROPIC_BASE_URL="http://localhost:4000"
 alias kus='docker run --rm -i --volume "(pwd):/workdir" --workdir /workdir k8s.gcr.io/kustomize/kustomize:v4.5.5'
 alias k9s='docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s:latest'
 
+alias coyolo='copilot --allow-all --experimental --model claude-opus-4.6'
+
 alias gistit='pbpaste | gh gist create - | xargs open'
 alias gpr='gh pr create --fill-first --web'
 alias top='gotop'
