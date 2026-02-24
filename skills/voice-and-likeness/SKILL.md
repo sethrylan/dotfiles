@@ -83,7 +83,7 @@ Use emoji as section markers sparingly (📐, 🔧, 🤝). Use callout boxes (Im
 
 ## Editing Checklist (run before publishing)
 - [ ] Opening line states the clearest takeaway
-- [ ] Tradeoffs are explicit; problems frramed in terms of systems, not symptoms
+- [ ] Tradeoffs are explicit; problems framed in terms of systems, not symptoms
 - [ ] Examples are concrete (numbers, artifacts, skills, tests).
 - [ ] Ask is clear (what action is wanted, by when).
 - [ ] Tone matches medium (internal brevity vs public narrative depth).
