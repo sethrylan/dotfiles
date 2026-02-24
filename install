@@ -32,6 +32,7 @@ ln -sf "$DIR"/zsh/.zshenv ~/.zshenv
 
 mkdir -p ~/.copilot
 ln -sf "$DIR"/models/copilot-instructions.md ~/.copilot/copilot-instructions.md
+ln -sf "$DIR"/skills ~/.copilot/skills
 
 ## There may already be a ~/.config/ directory, so we symlink everything under it.
 mkdir -p ~/.config/fish
