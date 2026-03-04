@@ -1,5 +1,13 @@
 #!/usr/bin/env zsh
 #
+# copilot-proxy - LiteLLM proxy for GitHub Copilot models
+#
+# Usage: copilot-proxy [--port <number>] [--nightly]
+#
+# Options:
+#   --port <number>  Port to run the proxy on (default: 4000)
+#   --nightly        Use LiteLLM nightly from GitHub main
+#
 # Getting Started
 #
 # 1. Create a GitHub Personal Access Token with copilot permissions:
@@ -7,82 +15,64 @@
 # 2. Store in 1password or macOS Keychain:
 #    1Password: op item create --title "litellm-copilot-token"  --vault "abc" --category "API Credential" --field "token=ghu_xxx_your_token"
 #    macOS Keychain: security add-generic-password -a "$USER" -s litellm-copilot-token -w "ghu_xxx_your_token"
-# 3. Install dependencies:
-#    python -m pip install --upgrade 'litellm[proxy]' backoff
-# 4. Update your bash or zsh profile and set ANTHROPIC_BASE_URL:
+# 3. Set COPILOT_PROXY_TOKEN_CMD in your shell profile:
+#    # 1Password:
+#    export COPILOT_PROXY_TOKEN_CMD='op read --account my.1password.com op://private/litellm-copilot-token/token'
+#    # macOS Keychain:
+#    export COPILOT_PROXY_TOKEN_CMD='security find-generic-password -a "$USER" -s litellm-copilot-token -w'
+# 4. Install uv:
+#    brew install uv
+# 5. Update your shell profile and set ANTHROPIC_BASE_URL:
 #    export ANTHROPIC_BASE_URL="http://localhost:4000"
 #
-# Copilot model probe results (Jan 8 2026)
-#
-# | Model | Status | Notes |
-# | --- | --- | --- |
-# | gpt-4.1 | ✅ working | normal chat endpoint |
-# | gpt-4o | ✅ working | normal chat endpoint |
-# | gpt-5-mini | ✅ working | normal chat endpoint |
-# | grok-code-fast-1 | ✅ working | normal chat endpoint |
-# | claude-haiku-4.5 | ✅ working | normal chat endpoint |
-# | claude-opus-4.5 | ✅ working | normal chat endpoint |
-# | claude-sonnet-4 | ✅ working | normal chat endpoint |
-# | claude-sonnet-4.5 | ✅ working | normal chat endpoint |
-# | gemini-2.5-pro | ✅ working | normal chat endpoint |
-# | gemini-3-flash | ❌ model_not_supported |
-# | gemini-3-pro | ❌ model_not_supported |
-# | goldeneye | ❌ model_not_supported (likely internal-only) |
-# | gpt-5 | ✅ working | Responses API |
-# | gpt-5-codex | ✅ working | Responses API |
-# | gpt-5.1 | ✅ working | Responses API (returned model id `gpt-5.1-2025-11-13`) |
-# | gpt-5.1-codex | ✅ working | Responses API |
-# | gpt-5.1-codex-max | ✅ working | Responses API |
-# | gpt-5.1-codex-mini | ✅ working | Responses API |
-# | gpt-5.2 | ✅ working | Responses API (returned model id `gpt-5.2-2025-12-11`) |
-#
-#
-# Check if fzf is installed
-if ! command -v fzf &> /dev/null; then
-  echo "Error: fzf is not installed"
-  echo "Install it with: brew install fzf"
-  exit 1
+
+# Default port
+PORT=4000
+USE_NIGHTLY=false
+
+# Parse command line arguments
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    --port)
+      PORT="$2"
+      shift 2
+      ;;
+    --nightly)
+      USE_NIGHTLY=true
+      shift
+      ;;
+    *)
+      echo "Unknown option: $1"
+      echo "Usage: copilot-proxy [--port <number>] [--nightly]"
+      exit 1
+      ;;
+  esac
+done
+
+# Check for COPILOT_PROXY_TOKEN_CMD
+if [[ -z "$COPILOT_PROXY_TOKEN_CMD" ]]; then
+  COPILOT_PROXY_TOKEN_CMD='op read --account my.1password.com op://private/litellm-copilot-token/token'
 fi
 
-# List of supported models (from probe results above)
-MODELS=(
-  "gpt-4.1"
-  "gpt-4o"
-  "gpt-5-mini"
-  "grok-code-fast-1"
-  "claude-haiku-4.6"
-  "claude-opus-4.6"
-  "claude-sonnet-4"
-  "claude-sonnet-4.6"
-  "gemini-2.5-pro"
-  "gpt-5"
-  "gpt-5-codex"
-  "gpt-5.1"
-  "gpt-5.1-codex"
-  "gpt-5.1-codex-max"
-  "gpt-5.1-codex-mini"
-  "gpt-5.2"
-)
-
-if [[ -n "$COPILOT_MODEL" && " ${MODELS[*]} " == *" $COPILOT_MODEL "* ]]; then
-  # If COPILOT_MODEL is set and in the MODELS list, use it.
-  SELECTED_MODEL="$COPILOT_MODEL"
-else
-  # Otherwise, use fzf to select a model
-  SELECTED_MODEL=$(printf '%s\n' "${MODELS[@]}" | fzf --prompt="Select a model: " --height=40% --reverse)
-fi
-
-# Exit if no model was selected
-if [[ -z "$SELECTED_MODEL" ]]; then
-  echo "No model selected. Exiting."
-  exit 1
-fi
-echo "Starting litellm with model: $SELECTED_MODEL"
-
-# TOKEN=$(security find-generic-password -a "$USER" -s litellm-copilot-token -w) || exit 1
-TOKEN=$(op read --account my.1password.com op://private/litellm-copilot-token/token) || exit 1
+# Get token using the configured command
+TOKEN=$(eval "$COPILOT_PROXY_TOKEN_CMD") || exit 1
 export GITHUB_TOKEN="$TOKEN"
 
-# Get the directory where this script is located
 CONFIG_FILE="$HOME/.dotfiles/.litellm-config.yaml"
-litellm --config "$CONFIG_FILE" --model github_copilot/$SELECTED_MODEL --port 4000
+
+# Check for uv
+if ! command -v uvx &> /dev/null; then
+  echo "Error: uv is not installed"
+  echo "Install it with: brew install uv"
+  exit 1
+fi
+
+LITELLM_SOURCE='litellm[proxy]'
+if [[ "$USE_NIGHTLY" == true ]]; then
+  LITELLM_SOURCE='litellm[proxy] @ git+https://github.com/BerriAI/litellm.git'
+fi
+
+echo "Starting litellm proxy on port $PORT..."
+
+# Pin to Python 3.13 because uvloop doesn't support Python 3.14+
+uvx --python 3.13 --from "$LITELLM_SOURCE" litellm --config "$CONFIG_FILE" --port $PORT
