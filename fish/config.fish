@@ -29,11 +29,13 @@ end
 export KUBE_EDITOR="code --wait"
 
 export COPILOT_MODEL="claude-opus-4.6"
-export ANTHROPIC_BASE_URL="http://localhost:4000"
 
 ###############################################################
 ########################### Aliases ###########################
 ###############################################################
+
+alias coplaud='ANTHROPIC_BASE_URL="https://api.githubcopilot.com" ANTHROPIC_AUTH_TOKEN=$(op read --account my.1password.com op://private/litellm-copilot-token/token) claude'
+
 alias kus='docker run --rm -i --volume "(pwd):/workdir" --workdir /workdir k8s.gcr.io/kustomize/kustomize:v4.5.5'
 alias k9s='docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s:latest'
 
