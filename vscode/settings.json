@@ -157,5 +157,7 @@
       "approveResponse": false
     }
   },
-  "workbench.secondarySideBar.defaultVisibility": "hidden"
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "editor.accessibilitySupport": "off",
+  "terminal.integrated.initialHint": false
 }
