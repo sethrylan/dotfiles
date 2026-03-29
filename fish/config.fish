@@ -14,6 +14,8 @@ fish_add_path /opt/homebrew/sbin
 fish_add_path ~/.dotfiles/bin
 fish_add_path ~/bin
 fish_add_path ~/.temporalio/bin
+fish_add_path /Applications/Obsidian.app/Contents/MacOS
+
 
 if test -f ~/.netrc
   export GOPROXY="https://goproxy.githubapp.com/mod,https://proxy.golang.org/,direct"
@@ -36,7 +38,7 @@ export ANTHROPIC_BASE_URL="http://localhost:4000"
 ########################### Aliases ###########################
 ###############################################################
 
-alias coplaud='ANTHROPIC_BASE_URL="https://api.githubcopilot.com" ANTHROPIC_AUTH_TOKEN=$(op read --account my.1password.com op://private/litellm-copilot-token/token) claude'
+alias coplaud='DISABLE_PROMPT_CACHING=1 ANTHROPIC_BASE_URL="https://api.githubcopilot.com" ANTHROPIC_AUTH_TOKEN=$(op read --account my.1password.com op://private/litellm-copilot-token/token) claude'
 
 alias kus='docker run --rm -i --volume "(pwd):/workdir" --workdir /workdir k8s.gcr.io/kustomize/kustomize:v4.5.5'
 alias k9s='docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s:latest'
