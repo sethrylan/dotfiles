@@ -38,7 +38,7 @@ export ANTHROPIC_BASE_URL="http://localhost:4000"
 ########################### Aliases ###########################
 ###############################################################
 
-alias coplaud='DISABLE_PROMPT_CACHING=1 ANTHROPIC_BASE_URL="https://api.githubcopilot.com" ANTHROPIC_AUTH_TOKEN=$(op read --account my.1password.com op://private/litellm-copilot-token/token) claude'
+alias coplaud='DISABLE_PROMPT_CACHING=1 ANTHROPIC_BASE_URL="https://api.githubcopilot.com" ANTHROPIC_AUTH_TOKEN=$(gh auth token) claude'
 
 alias kus='docker run --rm -i --volume "(pwd):/workdir" --workdir /workdir k8s.gcr.io/kustomize/kustomize:v4.5.5'
 alias k9s='docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s:latest'
