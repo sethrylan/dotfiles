@@ -30,8 +30,6 @@ end
 
 export KUBE_EDITOR="code --wait"
 
-export COPILOT_MODEL="claude-opus-4.6"
-
 export ANTHROPIC_BASE_URL="http://localhost:4000"
 
 ###############################################################
@@ -43,7 +41,7 @@ alias coplaud='DISABLE_PROMPT_CACHING=1 ANTHROPIC_BASE_URL="https://api.githubco
 alias kus='docker run --rm -i --volume "(pwd):/workdir" --workdir /workdir k8s.gcr.io/kustomize/kustomize:v4.5.5'
 alias k9s='docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s:latest'
 
-alias coyolo='copilot --allow-all --experimental --model claude-opus-4.6'
+alias coyolo='copilot --allow-all --experimental'
 
 alias gistit='pbpaste | gh gist create - | xargs open'
 alias gpr='gh pr create --fill-first --web'

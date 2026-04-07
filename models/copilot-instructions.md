@@ -1,4 +1,9 @@
 # Copilot Instructions
+
+## Repo Structure
+
+I generally have a ~/projects directory where I keep all my code, with subfolders for owners and repos. E.g., the sethrylan/readis repo would be cloned to ~/projects/sethrylan/readis. I sometimes have multiple repos, named with a suffix like -A, -explore, etc. If you find yourself in a repo like these, assume that I put you there for a reason.
+
 ## Git Conventions
 
 - Use conventional commit messages: `type(scope): description`
