@@ -4,6 +4,10 @@
 
 I generally have a ~/projects directory where I keep all my code, with subfolders for owners and repos. E.g., the sethrylan/readis repo would be cloned to ~/projects/sethrylan/readis. I sometimes have multiple repos, named with a suffix like -A, -explore, etc. If you find yourself in a repo like these, assume that I put you there for a reason.
 
+## PRs
+
+Create a draft PR unless instructed otherwise. Follow the PR template in the repo, if one exists, unless instructed otherwise. Do not include an exhaustive list of file changes in your description; instead, focus on the impact of the change.
+
 ## Git Conventions
 
 - Use conventional commit messages: `type(scope): description`
@@ -36,8 +40,6 @@ Run before considering work done:
 ### Testing
 
 - Use `require` from [testify](https://github.com/stretchr/testify) for assertions.
-- Mark tests as `t.Parallel()` unless there's a specific reason not to (shared state, database, etc.).
-- Use a parallel test bundle (`t.Run` + `t.Parallel()` in subtests) for table-driven tests.
 - Test names should describe the scenario, not the implementation: `TestCreateUser_DuplicateEmail` over `TestCreateUserReturnsError`.
 - When fixing a bug, write or update a test that reproduces the bug before fixing it.
 
