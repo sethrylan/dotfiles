@@ -30,13 +30,12 @@ end
 
 export KUBE_EDITOR="code --wait"
 
-export ANTHROPIC_BASE_URL="http://localhost:4000"
+export ANTHROPIC_BASE_URL="https://api.githubcopilot.com"
+export ANTHROPIC_AUTH_TOKEN=$(gh auth token)
 
 ###############################################################
 ########################### Aliases ###########################
 ###############################################################
-
-alias coplaud='DISABLE_PROMPT_CACHING=1 ANTHROPIC_BASE_URL="https://api.githubcopilot.com" ANTHROPIC_AUTH_TOKEN=$(gh auth token) claude'
 
 alias kus='docker run --rm -i --volume "(pwd):/workdir" --workdir /workdir k8s.gcr.io/kustomize/kustomize:v4.5.5'
 alias k9s='docker run --rm -it -v ~/.kube/config:/root/.kube/config quay.io/derailed/k9s:latest'
