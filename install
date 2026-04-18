@@ -34,6 +34,7 @@ mkdir -p ~/.copilot
 ln -sf "$DIR"/models/copilot-instructions.md ~/.copilot/copilot-instructions.md
 mkdir -p ~/.claude
 ln -sfn "$DIR"/skills ~/.claude/skills
+ln -sfn "$DIR"/.claude/commands ~/.claude/commands
 
 ## There may already be a ~/.config/ directory, so we symlink everything under it.
 mkdir -p ~/.config/fish
